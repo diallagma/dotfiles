@@ -36,11 +36,11 @@ let g:javascript_plugin_flow = 1
 
 " prettier
 let g:prettier#config#bracket_spacing = 'true'
-let g:prettier#autoformat = 1
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.json,*.graphql,*.vue PrettierAsync
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.json,*.graphql,*.vue PrettierAsync
 
 "tmux-navigator"
-set shell=/bin/bash\ -i
+set mouse=a
 
 " general
 syntax enable
@@ -51,6 +51,7 @@ hi Visual term=reverse cterm=reverse guibg=Grey
 set clipboard=unnamed
 set expandtab
 set hidden
+set history=200
 set hlsearch
 set ignorecase
 set incsearch
@@ -61,6 +62,9 @@ set smartcase
 set timeout timeoutlen=5000 ttimeoutlen=100
 set tabstop=2
 set wildmenu
+
+" language formatting
+autocmd FileType java setlocal ts=4 sts=4 sw=4
 
 "shortcuts
 nmap <leader>vrc :tabedit $MYVIMRC<CR>
@@ -75,6 +79,8 @@ nmap <leader>ve :vsplit .<CR>
 nmap <leader>te :tabe .<CR>
 
 map <leader>vp :VimuxPromptCommand<CR>
+
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 tnoremap <Esc> <C-\><C-n>
 " source the vimrc file after saving it
