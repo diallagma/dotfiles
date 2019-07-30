@@ -1,6 +1,5 @@
 set nocompatible
 
-
 " plug
 filetype off
 call plug#begin()
@@ -65,6 +64,22 @@ set wildmenu
 
 " language formatting
 autocmd FileType java setlocal ts=4 sts=4 sw=4
+
+" swap files
+set swapfile
+set directory^=~/.vim/swap//
+
+" backups
+set writebackup
+set nobackup
+set backupcopy=auto
+if has("patch-8.1.0251")
+	set backupdir^=~/.vim/backup//
+end
+
+" persist the undo tree for each file
+set undofile
+set undodir^=~/.vim/undo//
 
 "shortcuts
 nmap <leader>vrc :tabedit $MYVIMRC<CR>
