@@ -9,6 +9,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dkarter/bullets.vim'
 Plug 'mileszs/ack.vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'szw/vim-tags'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
@@ -42,8 +43,6 @@ let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#jsx_bracket_same_line = 'false'
 let g:prettier#config#arrow_parens = 'avoid'
 let g:prettier#config#trailing_comma = 'es5'
-let g:prettier#config#parser = 'babylon'
-let g:prettier#config#config_precedence = 'prefer-file'
 
 "tmux-navigator"
 set mouse=a
@@ -52,7 +51,7 @@ set mouse=a
 syntax enable
 set background=dark
 colorscheme nord
-hi Visual term=reverse cterm=reverse guibg=Grey
+highlight LineNr cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 highlight CursorLineNr cterm=NONE
 
 " config
