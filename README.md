@@ -1,10 +1,18 @@
 ## Installation
 
+## Setup
+* install homebrew
+* install zsh
+* brew install tmux
+* brew install vim
+
 ### Make Symlinks
-* ln -s .dotfiles/vimrc .vimrc
-* ln -s .dotfiles/tmux.conf .tmux.conf
+* ln -s ~/dotfiles/vimrc ~/.vimrc
+* ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+* ln -s ~/dotfiles/zshrc ~/.zshrc
  
 ### Make Vim Folders 
+* mkdir ~/.vim
 * mkdir ~/.vim/swap
 * mkdir ~/.vim/backup
 * mkdir ~/.vim/undo
@@ -15,6 +23,8 @@
 * :PlugInstall
 
 ### Install Tmux Plugin Manager
+* https://github.com/tmux-plugins/tpm
+* tmux
 * prefix + I
 
 ## Environment
